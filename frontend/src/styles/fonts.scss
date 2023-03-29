@@ -1,0 +1,25 @@
+@font-face {
+  font-family: gilroyExtraBold;
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: gilroyLight;
+  src: url("../fonts/Gilroy-Light.otf");
+}
+
+@font-face {
+  font-family: avenirRegular;
+  src: url("../fonts/avenirNextRegular.otf");
+}
+
+@font-face {
+  font-family: avenirBold;
+  src: url("../fonts//avenirNextBold.otf");
+}
+
+$gilroyExtraBold: gilroyExtraBold;
+$gilroyLight: gilroyLight;
+
+$avenirRegular: avenirRegular;
+$avenirBold: avenirBold;
