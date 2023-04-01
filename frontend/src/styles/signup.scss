@@ -1,5 +1,25 @@
 .signup {
   height: 100vh;
-  background-color: aqua;
-  font-family: $gilroyExtraBold;
+
+  padding: 20px;
+
+  .register-text {
+    font-family: $gilroyExtraBold;
+    font-size: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    input {
+      height: 40px;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      background: none;
+      width: 400px;
+    }
+  }
 }

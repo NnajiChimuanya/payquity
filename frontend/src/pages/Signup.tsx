@@ -1,10 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Signup = () => {
+const Signup: React.FC = () => {
+  const [Email, setEmail] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
+  const [password, setpassword] = useState("");
   return (
     <div className="signup">
-      <div> Register</div>
-      <p>Let's get started with your name</p>
+      <div className="register-text">Register</div>
+      <form className="form">
+        <input
+          value={Email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="form-field"
+          type={"text"}
+          placeholder="Email"
+        />
+
+        <input
+          value={phoneNumber}
+          onChange={(e) => setphoneNumber(e.target.value)}
+          className="form-field"
+          type={"text"}
+          placeholder="Phone Number"
+        />
+
+        <input
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
+          className="form-field"
+          type={"password"}
+          placeholder="Password"
+        />
+
+        {/* <div className="password-container">
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              id="password"
+              className="password"
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+            />
+            <div className="toggle" onClick={togglePassword}>
+              SHOW
+            </div>
+          </div> */}
+      </form>
     </div>
   );
 };
