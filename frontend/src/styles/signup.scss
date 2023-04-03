@@ -1,17 +1,32 @@
 .signup {
   height: 100vh;
-
   padding: 20px;
 
   .register-text {
     font-family: $gilroyExtraBold;
     font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .get-started {
+    color: #667085;
+    font-family: $avenirRegular;
+    font-size: 14px;
+    word-spacing: 2px;
+    line-height: 24px;
   }
 
   .form {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 60px;
+    margin-top: 50px;
+    max-width: 400px;
+
+    @media screen and (max-width: 700px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     input {
       height: 40px;
@@ -19,7 +34,31 @@
       border-left: 0px;
       border-right: 0px;
       background: none;
-      width: 400px;
+      max-width: 350px;
+      outline-width: 0px;
+
+      &::placeholder {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .button {
+    width: 350px;
+    background-color: #009ff5;
+    border-radius: 4px;
+    width: 350px;
+    height: 44px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 50px;
+    color: white;
+    font-family: $avenirBold;
+    text-transform: none;
+
+    &:hover,
+    &:active {
+      background-color: #009ff5;
     }
   }
 }

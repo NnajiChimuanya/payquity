@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
 
 const Signup: React.FC = () => {
   const [Email, setEmail] = useState("");
@@ -7,6 +8,7 @@ const Signup: React.FC = () => {
   return (
     <div className="signup">
       <div className="register-text">Register</div>
+      <div className="get-started">Let's get started with your info.</div>
       <form className="form">
         <input
           value={Email}
@@ -45,6 +47,7 @@ const Signup: React.FC = () => {
               SHOW
             </div>
           </div> */}
+        <Button className="button">Continue</Button>
       </form>
     </div>
   );
