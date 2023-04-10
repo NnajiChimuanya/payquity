@@ -41,9 +41,48 @@
         opacity: 0.7;
       }
     }
+
+    .alternative-signup {
+      display: flex;
+      align-self: center;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 20px;
+      font-family: $avenirRegular;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+
+      .link {
+        color: black;
+        text-decoration: none;
+      }
+
+      &:hover {
+        transition: all ease-in 0.2s;
+        font-size: 18px;
+      }
+    }
+
+    .alternative-signin {
+      display: flex;
+      align-self: center;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 200px;
+      font-family: $avenirRegular;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+
+      .link {
+        color: #009ff5;
+        text-decoration: none;
+      }
+    }
   }
 
-  .button {
+  .button-signup {
     width: 350px;
     background-color: #009ff5;
     border-radius: 4px;
@@ -51,6 +90,23 @@
     height: 44px;
     position: absolute;
     bottom: 0;
+    margin-bottom: 70px;
+    color: white;
+    font-family: $avenirBold;
+    text-transform: none;
+
+    &:hover,
+    &:active {
+      background-color: #009ff5;
+    }
+  }
+
+  .button-signin {
+    width: 350px;
+    background-color: #009ff5;
+    border-radius: 4px;
+    width: 350px;
+    height: 44px;
     margin-bottom: 50px;
     color: white;
     font-family: $avenirBold;

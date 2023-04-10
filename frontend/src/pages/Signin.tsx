@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
-const Signup: React.FC = () => {
+const Signin: React.FC = () => {
   const [Email, setEmail] = useState("");
   const [phoneNumber, setphoneNumber] = useState("");
   const [password, setpassword] = useState("");
+
   return (
     <div className="signup">
-      <div className="register-text">Register</div>
-      <div className="get-started">Let's get started with your info.</div>
+      <div className="register-text">Welcome back, Ejiro</div>
+      <div className="get-started">
+        Good to see you! Please enter your details.
+      </div>
       <form className="form">
         <input
           value={Email}
@@ -20,14 +23,6 @@ const Signup: React.FC = () => {
         />
 
         <input
-          value={phoneNumber}
-          onChange={(e) => setphoneNumber(e.target.value)}
-          className="form-field"
-          type={"text"}
-          placeholder="Phone Number"
-        />
-
-        <input
           value={password}
           onChange={(e) => setpassword(e.target.value)}
           className="form-field"
@@ -35,11 +30,12 @@ const Signup: React.FC = () => {
           placeholder="Password"
         />
 
-        <Button className="button-signup">Continue</Button>
-        <div className="alternative-signup">
-          {" "}
-          <Link className="link" to={"/"}>
-            Login instead
+        <Button className="button-signin">Log in</Button>
+
+        <div className="alternative-signin">
+          Not Ejiro ?
+          <Link className="link" to={"/signup"}>
+            Register
           </Link>
         </div>
       </form>
@@ -47,4 +43,4 @@ const Signup: React.FC = () => {
   );
 };
 
-export default Signup;
+export default Signin;
