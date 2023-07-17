@@ -28,7 +28,7 @@ if (cluster.isMaster) {
 
   mongoose
     .connect(process.env.mongo_uri!)
-    .then(() => console.log("connected to the database"))
+    .then(() => console.log("connectedd to the database"))
     .catch((err) => console.log(err));
 
   app.listen(port, () =>

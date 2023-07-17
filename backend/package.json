@@ -2,11 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon src/app.ts",
-    "start": "concurrently npm:start:*"
+    "dev": "concurrently npm:start:*",
+    "start": "ts-node-esm --esm src/app.ts"
   },
   "keywords": [],
   "author": "",
