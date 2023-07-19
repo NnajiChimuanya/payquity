@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IconType } from "react-icons";
 import { ImHome3 } from "react-icons/im";
 import { AiOutlineWifi, AiOutlineStock } from "react-icons/ai";
@@ -7,6 +7,7 @@ import { BiTransfer, BiHistory } from "react-icons/bi";
 import { PiUsersThreeBold } from "react-icons/pi";
 import { TbSettingsCog } from "react-icons/tb";
 import { FaPowerOff } from "react-icons/fa";
+import { PayquityContext } from "../../context/Context";
 
 interface ISidebarContents {
   name: string;
@@ -57,14 +58,24 @@ const sidebarContents: ISidebarContents[] = [
 ];
 
 const Sidebar = () => {
+  const { state, dispatch } = useContext(PayquityContext);
+  const { showSidebar } = state;
+
   const [active, setActive] = useState<React.SetStateAction<number>>(0);
 
   const handleLinkClick = (id: number) => {
     setActive(id);
   };
 
+  const handleToggleSidebar = () => {
+    dispatch({ type: "SET_SHOWSIDEBAR", payload: showSidebar ? false : true });
+  };
+
+  console.log(state);
+
   return (
     <div className="sidebar">
+      <button onClick={handleToggleSidebar}>Click</button>
       {sidebarContents.map((item, id) => {
         let { name, Icon } = item;
         return (
