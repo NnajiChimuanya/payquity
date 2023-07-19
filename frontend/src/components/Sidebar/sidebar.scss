@@ -1,13 +1,40 @@
 .sidebar {
   height: 100vh;
   width: 250px;
-  background-color: red;
+
   overflow-y: scroll;
+  z-index: 100;
+  font-family: $avenirRegular;
+  padding: 50px 5px 10px 20px;
+  border: 1px solid rgba(16, 24, 40, 0.1);
 
   &::-webkit-scrollbar {
     display: none;
     visibility: hidden;
   }
 
-  z-index: 100;
+  .sidebarItem {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: rgba(102, 112, 133, 1);
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(16, 24, 40, 1);
+    }
+
+    .sidebarItemIcon {
+      margin-right: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .active {
+    color: rgba(16, 24, 40, 1);
+  }
 }
