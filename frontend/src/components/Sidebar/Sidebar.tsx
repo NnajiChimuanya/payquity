@@ -1,7 +1,12 @@
 import React, { useState, useContext } from "react";
 import { IconType } from "react-icons";
 import { ImHome3 } from "react-icons/im";
-import { AiOutlineWifi, AiOutlineStock } from "react-icons/ai";
+import {
+  AiOutlineWifi,
+  AiOutlineStock,
+  AiOutlineRight,
+  AiOutlineLeft,
+} from "react-icons/ai";
 import { MdOutlinePayment, MdAccountBalance } from "react-icons/md";
 import { BiTransfer, BiHistory } from "react-icons/bi";
 import { PiUsersThreeBold } from "react-icons/pi";
@@ -63,19 +68,30 @@ const Sidebar = () => {
 
   const [active, setActive] = useState<React.SetStateAction<number>>(0);
 
+  //Set active link
   const handleLinkClick = (id: number) => {
     setActive(id);
   };
 
+  //Toggle the sidebar
   const handleToggleSidebar = () => {
     dispatch({ type: "SET_SHOWSIDEBAR", payload: showSidebar ? false : true });
   };
 
-  console.log(state);
-
   return (
     <div className="sidebar">
-      <button onClick={handleToggleSidebar}>Click</button>
+      {showSidebar ? (
+        <AiOutlineLeft
+          className="toggleIconOpen"
+          onClick={handleToggleSidebar}
+        />
+      ) : (
+        <AiOutlineRight
+          className="toggleIconClose"
+          onClick={handleToggleSidebar}
+        />
+      )}
+
       {sidebarContents.map((item, id) => {
         let { name, Icon } = item;
         return (
@@ -87,7 +103,7 @@ const Sidebar = () => {
             }}
           >
             <Icon className="sidebarItemIcon" />
-            <p>{name}</p>
+            <p className={`${showSidebar ? null : "collapse"}`}>{name}</p>
           </div>
         );
       })}
