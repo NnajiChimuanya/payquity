@@ -37,4 +37,8 @@
   .active {
     color: rgba(16, 24, 40, 1);
   }
+
+  .sidebarItem:last-child {
+    color: rgba(247, 85, 0, 1);
+  }
 }
