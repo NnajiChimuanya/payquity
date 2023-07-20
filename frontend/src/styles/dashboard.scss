@@ -1,12 +1,51 @@
+body {
+  &::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .dashboard {
   display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+  }
 
   .dashboardBody {
     background-color: brown;
-
     position: absolute;
-    width: 100vw;
-
     padding-left: 100px;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+      visibility: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: $avenirRegular;
+      border: 1px solid rgba(16, 24, 40, 0.1);
+
+      // height: 50px;
+      top: 0;
+      position: sticky;
+      background-color: white;
+
+      .notificationsIcon {
+        transition: transform 0.2s;
+        font-size: 20px;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }

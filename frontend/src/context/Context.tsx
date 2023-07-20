@@ -32,7 +32,7 @@ interface ContextProviderProps {
 }
 
 const initalState = {
-  name: "",
+  name: "Nnaji Chimuanya",
   email: "",
   phoneNumber: "",
   password: "",
