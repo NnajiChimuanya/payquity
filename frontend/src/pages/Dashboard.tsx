@@ -12,10 +12,15 @@ const Dashboard: React.FC = () => {
       <Sidebar />
       <div className="dashboardBody">
         <div className="header">
-          <div>Welcome back, {name}</div>
-          <div>
-            <IoMdNotificationsOutline className="notificationsIcon" />
-            <FaUserAlt />
+          <h3>Dashboard</h3>
+          <div className="headerWelcome">
+            <p>
+              Welcome back, <strong>{name}</strong>{" "}
+            </p>
+            <div>
+              <IoMdNotificationsOutline className="notificationsIcon" />
+              <FaUserAlt />
+            </div>
           </div>
         </div>
       </div>
