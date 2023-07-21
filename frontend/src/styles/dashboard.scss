@@ -15,7 +15,7 @@ body {
   }
 
   .dashboardBody {
-    background-color: brown;
+    // background-color: brown;
     position: absolute;
     padding-left: 80px;
     padding-right: 20px;
@@ -41,18 +41,30 @@ body {
       .headerWelcome {
         display: flex;
         justify-content: space-between;
+        margin-top: 5px;
 
         p {
           font-size: 12px;
         }
-      }
 
-      .notificationsIcon {
-        transition: transform 0.2s;
-        font-size: 20px;
+        div {
+          display: flex;
+          align-items: center;
 
-        &:hover {
-          transform: scale(1.1);
+          .notificationsIcon {
+            transition: transform 0.2s;
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          .userAvatar {
+            cursor: pointer;
+          }
         }
       }
     }

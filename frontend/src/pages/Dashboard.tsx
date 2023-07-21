@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
             </p>
             <div>
               <IoMdNotificationsOutline className="notificationsIcon" />
-              <FaUserAlt />
+              <FaUserAlt className="userAvatar" />
             </div>
           </div>
         </div>
