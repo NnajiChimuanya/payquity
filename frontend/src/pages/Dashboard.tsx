@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import { FaUserAlt } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { PayquityContext } from "../context/Context";
+import { MdOutlineTableView } from "react-icons/md";
 
 const Dashboard: React.FC = () => {
   const { state, dispatch } = useContext(PayquityContext);
@@ -22,6 +23,14 @@ const Dashboard: React.FC = () => {
               <FaUserAlt className="userAvatar" />
             </div>
           </div>
+        </div>
+
+        <div className="frame1">
+          <button className="requestTerminal">
+            {" "}
+            <MdOutlineTableView className="terminalIcon" /> Request for terminal
+          </button>
+          <button className="fundWallet">Fund your wallet </button>
         </div>
       </div>
     </div>

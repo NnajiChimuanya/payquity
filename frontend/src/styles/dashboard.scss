@@ -54,7 +54,7 @@ body {
           .notificationsIcon {
             transition: transform 0.2s;
             font-size: 20px;
-            margin-right: 10px;
+            margin-right: 20px;
             cursor: pointer;
 
             &:hover {
@@ -66,6 +66,55 @@ body {
             cursor: pointer;
           }
         }
+      }
+    }
+
+    .frame1 {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media screen and (min-width: 700px) {
+        justify-content: right;
+      }
+
+      button {
+        height: 40px;
+        width: 150px;
+        font-family: $avenirRegular;
+        font-size: 14px;
+        border: 0px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px;
+
+        @media screen and (min-width: 700px) {
+          width: 180px;
+          &:nth-child(1) {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .terminalIcon {
+        display: none;
+
+        @media screen and (min-width: 700px) {
+          display: block;
+          margin-right: 5px;
+        }
+      }
+
+      .requestTerminal {
+        background-color: rgba(247, 85, 0, 1);
+      }
+
+      .fundWallet {
+        background-color: rgba(0, 159, 245, 1);
       }
     }
   }
