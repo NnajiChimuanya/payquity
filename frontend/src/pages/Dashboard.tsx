@@ -4,6 +4,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { PayquityContext } from "../context/Context";
 import { MdOutlineTableView } from "react-icons/md";
+import { AiOutlineWallet } from "react-icons/ai";
 
 const Dashboard: React.FC = () => {
   const { state, dispatch } = useContext(PayquityContext);
@@ -31,6 +32,22 @@ const Dashboard: React.FC = () => {
             <MdOutlineTableView className="terminalIcon" /> Request for terminal
           </button>
           <button className="fundWallet">Fund your wallet </button>
+        </div>
+
+        <div className="frame2">
+          <div className="mainCard">
+            <div className="iconContainer">
+              <AiOutlineWallet />
+            </div>
+
+            <div className="amountContainer">
+              <p>Wallet Balance</p>
+              <h5>$20,000</h5>
+            </div>
+          </div>
+          <div className="mainCard"></div>
+          <div className="mainCard"></div>
+          <div className="mainCard"></div>
         </div>
       </div>
     </div>

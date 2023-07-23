@@ -117,5 +117,77 @@ body {
         background-color: rgba(0, 159, 245, 1);
       }
     }
+
+    .frame2 {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 150px 150px;
+      row-gap: 10px;
+      column-gap: 15px;
+
+      @media screen and (min-width: 500px) {
+        grid-template-columns: 180px 180px;
+        row-gap: 10px;
+        column-gap: 25px;
+      }
+
+      @media screen and (min-width: 700px) {
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+        // row-gap: 10px;
+        column-gap: 25px;
+      }
+
+      .mainCard {
+        height: 100px;
+        width: 150px;
+        background-color: rgba(1, 54, 83, 1);
+        border-radius: 5px;
+        position: relative;
+
+        @media screen and (min-width: 500px) {
+          height: 150px;
+          width: 180px;
+        }
+
+        @media screen and (min-width: 700px) {
+          height: 150px;
+          width: 20vw;
+        }
+
+        .iconContainer {
+          height: 25px;
+          width: 30px;
+          background-color: rgba(239, 248, 255, 1);
+          position: absolute;
+          margin-top: 10px;
+          margin-left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          font-size: 12px;
+        }
+
+        .amountContainer {
+          position: absolute;
+          bottom: 0;
+          width: 100px;
+          height: 40px;
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-left: 20px;
+          margin-bottom: 15px;
+          padding: 5px 0px 0px 5px;
+          border-radius: 5px;
+
+          p {
+            font-size: 10px;
+          }
+
+          h5 {
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
   }
 }
